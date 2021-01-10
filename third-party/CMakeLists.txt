@@ -35,8 +35,8 @@ ExternalProject_Add(
 
 ExternalProject_Add(
     cmakefied
-    GIT_REPOSITORY https://github.com/pr0g/cmakefied.git
-    GIT_TAG        origin/main
+    GIT_REPOSITORY https://github.com/cboiangiu/cmakefied
+    GIT_TAG        origin/fix-imgui-examples-moving-to-backends
     UPDATE_COMMAND bash <SOURCE_DIR>/git-clone.sh imgui
     SOURCE_SUBDIR ../imgui
     BINARY_DIR ${CMAKE_CURRENT_BINARY_DIR}/imgui/build/${build_type_dir}
