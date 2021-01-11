@@ -39,3 +39,12 @@ add_custom_command(
     $<TARGET_FILE_DIR:${PROJECT_NAME}>
     VERBATIM)
 endif()
+
+if (CMAKE_GENERATOR STREQUAL Xcode)
+# copy shader/ to the same folder as the executable
+add_custom_command(
+    TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    ${CMAKE_CURRENT_SOURCE_DIR}/shader
+    $<TARGET_FILE_DIR:${PROJECT_NAME}>/shader)
+endif()

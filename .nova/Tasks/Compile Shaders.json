@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : ".\/compile-shaders-macos.sh"
+    }
+  },
+  "identifier" : "C76475AD-1263-475B-B2F9-4BAC92AE3261",
+  "openLogOnRun" : "start"
+}

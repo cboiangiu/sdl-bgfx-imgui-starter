@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "cmake --build build\/release"
+    }
+  },
+  "identifier" : "DFA37652-ECEB-470A-B515-996E33FD64E3",
+  "openLogOnRun" : "start"
+}

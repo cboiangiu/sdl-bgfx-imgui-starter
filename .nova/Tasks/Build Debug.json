@@ -1,0 +1,10 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "script" : "cmake --build build\/debug"
+    }
+  },
+  "identifier" : "B3133748-2F4C-4ABF-B067-68DBF10CABEF",
+  "openLogOnRun" : "start"
+}

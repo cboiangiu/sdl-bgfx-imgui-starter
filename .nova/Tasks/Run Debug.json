@@ -1,0 +1,11 @@
+{
+  "actions" : {
+    "run" : {
+      "enabled" : true,
+      "script" : ".\/build\/debug\/sdl-bgfx-imgui-starter"
+    }
+  },
+  "identifier" : "0E348DAD-7C0F-413A-994A-A45F59053C7D",
+  "openLogOnRun" : "start",
+  "persistent" : true
+}
