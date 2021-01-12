@@ -25,10 +25,12 @@ target_link_libraries(
 set_target_properties(
     ${PROJECT_NAME} PROPERTIES CXX_STANDARD 11)
 
-# required for project when using visual studio generator
+# required for project when using visual studio or xcode generator
 set_target_properties(
     ${PROJECT_NAME} PROPERTIES
-    VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})
+    VS_DEBUGGER_WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+    XCODE_GENERATE_SCHEME TRUE
+    XCODE_SCHEME_WORKING_DIRECTORY "${CMAKE_SOURCE_DIR}")
 
 if (WIN32)
 # copy the SDL2.dll to the same folder as the executable
@@ -38,13 +40,4 @@ add_custom_command(
     $<TARGET_FILE:SDL2::SDL2>
     $<TARGET_FILE_DIR:${PROJECT_NAME}>
     VERBATIM)
-endif()
-
-if (CMAKE_GENERATOR STREQUAL Xcode)
-# copy shader/ to the same folder as the executable
-add_custom_command(
-    TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_CURRENT_SOURCE_DIR}/shader
-    $<TARGET_FILE_DIR:${PROJECT_NAME}>/shader)
 endif()
